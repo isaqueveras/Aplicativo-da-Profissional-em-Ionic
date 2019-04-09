@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="green">
+    <ion-title>1° ano - Linguagens e Código</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+    <h2>Português</h2>
+  </ion-item-divider>
+
+  <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of literatura">
+    {{ lista.portugues }}
+  </ion-card-content>
+
+   <br>
+
+  <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+    <h2>Inglês</h2>
+  </ion-item-divider>
+
+  <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of literatura">
+    {{ lista.ingles }}
+  </ion-card-content>
+
+  <br>
+
+  <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+    <h2>Espanhol</h2>
+  </ion-item-divider>
+
+  <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of literatura">
+    {{ lista.espanhol }}
+  </ion-card-content>
+
+ <br>
+
+  <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+    <h2>Arte</h2>
+  </ion-item-divider>
+
+  <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of literatura">
+    {{ lista.artes }}
+  </ion-card-content>
+
+  <br>
+
+  <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+    <h2>Educação Física</h2>
+  </ion-item-divider>
+
+  <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of literatura">
+    {{ lista.educacao_fisica }}
+  </ion-card-content>
+
+  <br>
+  
+</ion-content>

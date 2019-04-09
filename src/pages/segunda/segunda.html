@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="laranja">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Segunda-Feira</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+
+      <ion-item *ngFor="let lista of cardapio">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/icons/merenda.png" alt="">
+        </ion-avatar>
+        <h4>{{lista.cafe}}</h4>
+      </ion-item>
+  
+      <ion-item *ngFor="let lista of cardapio">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/icons/almoco.png" alt="">
+        </ion-avatar>
+        <h4 text-justify>
+          <b>Pra. Principal: </b>{{lista.almoco}}<br>
+          <b>Acompanhamentos: </b>{{lista.acomp}}<br>
+          <b>Guarnição: </b>{{lista.guarn}}<br>
+          <b>Salada: </b>{{lista.salada}}<br>
+          <b>Bebida: </b>{{lista.bebida}}<br>
+          <b>Sobremesa: </b>{{lista.sobrem}}<br>
+        </h4>
+      </ion-item>
+  
+      <ion-item *ngFor="let lista of cardapio">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/icons/merenda.png" alt="">
+        </ion-avatar>
+        <h4>{{lista.lanche}}</h4>
+      </ion-item>
+  
+    </ion-list>
+ 
+</ion-content>
