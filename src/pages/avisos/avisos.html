@@ -1,0 +1,45 @@
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+    <ion-row style="margin:-5px;">
+      <ion-col col-12>
+          <img src="../../assets/imgs/enem-2017.png" alt="" style="width:100%;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+      </ion-col>
+      <ion-col col-12>
+        <ion-card style="margin-top:-50px;">
+          <ion-card-header text-center color="green">
+            AVISOS DA EEEP
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  <ion-card *ngFor="let lista of avisos">
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-5><b style="color:#3a9f81;">TIPO:</b> </ion-col>
+        <ion-col col-7>{{ lista.tipos }} </ion-col>
+
+        <ion-col col-12><hr></ion-col>
+
+        <ion-col col-5><b style="color:#3a9f81;">LOCAL:</b> </ion-col>
+        <ion-col col-7>{{ lista.local }}</ion-col>
+
+        <ion-col col-12><hr></ion-col>
+
+        <ion-col col-5><b style="color:#3a9f81;">DATA E HORA:</b> </ion-col>
+        <ion-col col-7>{{ lista.datahora }}</ion-col>
+
+        <ion-col col-12><hr></ion-col>
+
+        <ion-col col-5><b style="color:#3a9f81;">MENSAGEM:</b> </ion-col>
+        <ion-col col-7>{{ lista.msg }}</ion-col>
+
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

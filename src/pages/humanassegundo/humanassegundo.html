@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="green">
+      <ion-title>2° Série - Ciências Humanas</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>História</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of humanas">
+      {{ lista.historia }}
+    </ion-card-content>
+  
+     <br>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Geografia</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of humanas">
+      {{ lista.geografia }}
+    </ion-card-content>
+  
+    <br>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Filosofia</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of humanas">
+      {{ lista.filosofia }}
+    </ion-card-content>
+  
+   <br>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Sociologia</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of humanas">
+      {{ lista.sociologia }}
+    </ion-card-content>
+  
+    <br>
+    
+  </ion-content>
+  

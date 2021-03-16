@@ -24,7 +24,7 @@ export class LiteraturaprimeiroPage {
       }
     );
   }
-
+ 
   doRefresh(refresher){
     console.log('begin async operation', refresher)
     this.servidor.getPegar_Literatura_Primeiro().subscribe(

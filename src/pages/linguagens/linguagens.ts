@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LiteraturaprimeiroPage } from '../literaturaprimeiro/literaturaprimeiro';
 import { LiteraturasegundaPage } from '../literaturasegundo/literaturasegunda';
+import { LiteraturaterceiroPage } from '../literaturaterceiro/literaturaterceiro';
 
 @IonicPage()
 @Component({
@@ -9,7 +10,7 @@ import { LiteraturasegundaPage } from '../literaturasegundo/literaturasegunda';
   templateUrl: 'linguagens.html',
 })
 export class LinguagensPage {
-  
+   
   items: Array<{title: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -30,6 +31,13 @@ export class LinguagensPage {
   itemLiteraturaSegundo(event, items) {
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(LiteraturasegundaPage, {
+      item: items
+    });
+  }
+
+  itemLiteraturaTerceiro(event, items) {
+    // That's right, we're pushing to ourselves!
+    this.navCtrl.push(LiteraturaterceiroPage, {
       item: items
     });
   }

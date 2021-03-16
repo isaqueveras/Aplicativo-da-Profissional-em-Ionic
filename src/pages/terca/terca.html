@@ -1,48 +1,48 @@
 <ion-header>
-  <ion-navbar color="laranja">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Terça-Feira</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-
-  <ion-list>
-
-      <ion-item *ngFor="let lista of cardapio">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/icons/merenda.png" alt="">
-        </ion-avatar>
-        <h4>{{lista.cafe}}</h4>
-      </ion-item>
+    <ion-navbar color="green">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Cardápio - Terça-Feira</ion-title>
+    </ion-navbar>
+  </ion-header>
   
-      <ion-item *ngFor="let lista of cardapio">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/icons/almoco.png" alt="">
-        </ion-avatar>
-        <h4 text-justify>
-          <b>Pra. Principal: </b>{{lista.almoco}}<br>
-          <b>Acompanhamentos: </b>{{lista.acomp}}<br>
-          <b>Guarnição: </b>{{lista.guarn}}<br>
-          <b>Salada: </b>{{lista.salada}}<br>
-          <b>Bebida: </b>{{lista.bebida}}<br>
-          <b>Sobremesa: </b>{{lista.sobrem}}<br>
-        </h4>
-      </ion-item>
+  <ion-content padding>
   
-      <ion-item *ngFor="let lista of cardapio">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/icons/merenda.png" alt="">
-        </ion-avatar>
-        <h4>{{lista.lanche}}</h4>
-      </ion-item>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
   
-    </ion-list>
- 
-</ion-content>
+    <ion-row *ngFor="let lista of cardapio">
+        <ion-col col-12 class="design-header">
+          <img src="../../assets/imgs/icons/almoco.png" style="height: 25px;">
+          Café da Manhã
+        </ion-col>
+        <ion-col col-12>{{ lista.cafe }}</ion-col> <br>
+              
+        <ion-col col-12><br></ion-col>
+  
+        <ion-col col-12 class="design-header">
+            <img src="../../assets/imgs/icons/almoco.png" style="height: 25px;">
+            Almoço
+        </ion-col>
+        <ion-col col-12 *ngFor="let lista of cardapio">
+          <b style="font-size:15px;">Prato Principal:</b> {{lista.almoco}} <hr>
+          <b style="font-size:15px;">Acompanhamentos:</b> {{lista.acomp}} <hr>
+          <b style="font-size:15px;">Guarnição:</b>       {{lista.guarn}} <hr>
+          <b style="font-size:15px;">Salada:</b>          {{lista.salada}} <hr>
+          <b style="font-size:15px;">Sobremesa:</b>       {{lista.sobrem}} <br>
+        </ion-col> 
+  
+        <ion-col col-12><br></ion-col>
+  
+        <ion-col col-12 class="design-header">
+            <img src="../../assets/imgs/icons/almoco.png" style="height: 25px;">
+            Merenda da Tarde
+        </ion-col>
+        <ion-col col-12>{{ lista.lanche }}</ion-col>
+      
+      </ion-row>
+   
+  </ion-content>
+  

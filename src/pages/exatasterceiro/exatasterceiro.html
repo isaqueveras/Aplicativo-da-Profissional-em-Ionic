@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="green">
+      <ion-title>3° Série - Ciências Exatas</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Matemática</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of exatas">
+      {{ lista.matematica }}
+    </ion-card-content>
+  
+     <br>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Física</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of exatas">
+      {{ lista.fisica }}
+    </ion-card-content>
+  
+    <br>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Química</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of exatas">
+      {{ lista.quimica }}
+    </ion-card-content>
+  
+   <br>
+  
+    <ion-item-divider style="background: #f5f5f5;border-bottom: 2px solid orange;">
+      <h2>Biologia</h2>
+    </ion-item-divider>
+  
+    <ion-card-content style="width: 100%;border-bottom: 1px solid #ccc;" *ngFor="let lista of exatas">
+      {{ lista.biologia }}
+    </ion-card-content>
+  
+    <br>
+    
+  </ion-content>
+  

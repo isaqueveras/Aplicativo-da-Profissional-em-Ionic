@@ -1,0 +1,85 @@
+<ion-header>
+    <ion-navbar color="green">
+      <ion-title>Horário de Terça-Feira</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>1° - Primeiro </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios"> {{ lista.prim }} </ion-col>
+          </ion-row>
+        </h3>
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>2° - Segundo </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios"> {{ lista.segu }} </ion-col>
+          </ion-row>
+        </h3>
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>3° - Terceiro </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.terc }} </ion-col>
+          </ion-row>
+        </h3>
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>4° - Quarto </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.quar }} </ion-col>
+          </ion-row>
+        </h3>
+    
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>5° - Quinto </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.quin }} </ion-col>
+          </ion-row>
+        </h3>
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>6° - Sexto </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.sext }} </ion-col>
+          </ion-row>
+        </h3>
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>7° - Sétimo </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.seti }} </ion-col>
+          </ion-row>
+        </h3>
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>8° - Oitavo </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.oita }} </ion-col>
+          </ion-row>
+        </h3>
+    
+        <h3 ion-item block color="light" class="horarios">
+          <ion-row>
+            <ion-col col-5>9° - Nono </ion-col>
+            <ion-col col-2 text-center><ion-icon name="arrow-dropright"></ion-icon></ion-col>
+            <ion-col col-5 text-center *ngFor="let lista of horarios">  {{ lista.nono }} </ion-col>
+          </ion-row>
+        </h3>
+        
+  </ion-content>
